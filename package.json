@@ -4,7 +4,7 @@
   "description": "Google Photos Migration API in nodejs using express",
   "main": "routes/route.js",
   "scripts": {
-    "start": "node routes/route.js",
+    "start": "node route.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
