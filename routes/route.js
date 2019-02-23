@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port = 3000;
+const port = 8080;
 const migrateController = require('./controllers/migrate-controller');
 
 app.use(bodyParser.json());
