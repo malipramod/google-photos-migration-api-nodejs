@@ -15,8 +15,9 @@
   ],
   "author": "Pramod Mali -- prmaodmaali@gmail.com",
   "license": "ISC",
-  "dependencies":{
+  "dependencies": {
+    "axios": "^0.18.0",
     "express": "^4.16.4",
-    "axios": "^0.18.0"
+    "request": "^2.88.0"
   }
 }
