@@ -2,7 +2,7 @@
   "name": "google-photos-migration-api",
   "version": "1.0.0",
   "description": "Google Photos Migration API in nodejs using express",
-  "main": "routes/route.js",
+  "main": "route.js",
   "scripts": {
     "start": "node route.js",
     "test": "echo \"Error: no test specified\" && exit 1"
