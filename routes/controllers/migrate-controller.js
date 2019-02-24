@@ -3,6 +3,12 @@ const axios = require('axios');
 
 const constants = require('../../config/constant');
 
+/**
+ * 
+ * @param {string} authToken 
+ * @param {array} mediaItems 
+ * @param {string} albumData 
+ */
 let migratePhotos = async (authToken, mediaItems, albumData) => {
     let responses = {};
     let uploadTokens = {};
