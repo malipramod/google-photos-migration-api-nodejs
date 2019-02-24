@@ -66,7 +66,7 @@ let migratePhotos = async (authToken, mediaItems, albumData) => {
                 new Promise((resolve, reject) => {
                     uploadMedia(authToken, batchCreateModel).then(data => {
                         responses.newMediaItemResults = [];
-                        responses.newMediaItemResults.push(data.data);
+                        responses.newMediaItemResults.push(data.data.newMediaItemResults);
                         resolve(responses);
                     }).catch(err => {
                         reject(err.response)
