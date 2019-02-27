@@ -1,11 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 var cors = require('cors');
+var timeout = require('connect-timeout'); 
+
 const app = express();
 const port = 8080;
 const migrateController = require('./routes/controllers/migrate-controller');
 
 app.use(bodyParser.json({limit: '50mb'}));
+app.use(timeout('12000s'));
 app.use(express.json());
 app.use(cors());
 
