@@ -1,11 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+var cors = require('cors');
 const app = express();
 const port = 8080;
 const migrateController = require('./routes/controllers/migrate-controller');
 
 app.use(bodyParser.json());
 app.use(express.json());
+app.use(cors());
 
 app.listen(process.env.port || process.env.PORT || port, function () {
     console.log(`Example app listening at ${port}`);
