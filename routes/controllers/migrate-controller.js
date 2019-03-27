@@ -44,15 +44,19 @@ let migratePhotos = async (authToken, mediaItems, albumData) => {
                         }).catch(ex => {
                             reject(ex);
                         });
-                    } else {
-                        reject(ex);
+                    } else { 
+                        console.log(i,"::",err)
+                        reject(err);
                     }
                 });
             })
         );
     }
-
-    await Promise.all(promiseArrayUploadToken);
+    try{
+        await Promise.all(promiseArrayUploadToken);
+    }catch(ex){
+        console.log(ex);
+    }
 
     let lastUploadToken = uploadTokens.newMediaItems[uploadTokens.newMediaItems.length - 1].simpleMediaItem.uploadToken;
     let batchCreateModel = {};
@@ -82,7 +86,11 @@ let migratePhotos = async (authToken, mediaItems, albumData) => {
         }
     }
 
-    await Promise.all(promiseArrayUpload);
+    try{
+        await Promise.all(promiseArrayUpload);
+    }catch(ex){
+        console.log(ex);
+    }
     return responses;
 }
 
